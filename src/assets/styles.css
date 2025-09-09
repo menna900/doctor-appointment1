@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html, body, #app { height: 100%; }
+}
+
+/* custom tweaks */
+.hero-gradient{ background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(16,185,129,0.06)); }
+.card-frost{ background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+.dark .card-frost{ background: rgba(15,23,42,0.42); }
+
+/* navbar hamburger three-line style */
+.hamburger span{ display:block; height:2px; background:currentColor; margin:5px 0; transition: transform .25s ease; }
+/* small animation */
+.fade-up{ transform: translateY(8px); opacity:0; animation:fadeUp .6s forwards; }
+@keyframes fadeUp{ to{ transform:none; opacity:1 } }
